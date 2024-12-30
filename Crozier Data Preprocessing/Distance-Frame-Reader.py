@@ -13,10 +13,13 @@
 
 
 ###########
-# Note: As currently implemented, this script reads all the videos in files in it's directory
+# Note: As currently implemented, this script reads all the videos in it's directory
 # The input is the set of videos, and the output is one graph per video showing the distance values of each frame
 # To use for extracting frames based on distance, should save the values to a csv or other format in the code
 # or, can refactor the code such that this is a library that can be called by other software
+
+# Note: Lowest hanging fruit for improvement right now is to add an adjustment that adds 10m to all future values
+# if a drop by 10 is detected. Right now, script only fixes a drop by 10m if there's a future jump by 10m
 
 
 import cv2
