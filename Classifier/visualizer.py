@@ -1,23 +1,23 @@
 """
-Theis program uses the trained model to analyze and process a video
+This program uses the trained model to analyze and shorten a video
 
-How to use:
-1. In a folder, make a copy of the conda environment, the checkpoint, sewer_image_classifier.py, and visualizer.py
+How to use (using VS Code code):
+1. Create a folder containing the conda environment, the model checkpoint, sewer_image_classifier.py, and visualizer.py
+    a. Alternatively, use a different trained model
 2. Copy the raw videos into the folder
-3. Set up the conda environment
-4. Use the model checkpoint or train a model using sewer_image_classifier.py
-5. In main(), load the name of the video to be processed
-6. Run
+3. Initialize the conda environment in VS Code
+4. In main(), load the name of the video to be processed
+5. Run the program
 
 How this program works:
-1. process_video() runs the model and predicts the deficiency likelihood at each frame, skipping by 'step'
-2. visualize_predictions() plots the prediction value vs video time
+1. process_video() uses the model and predicts the deficiency likelihood at each frame, skipping by the 'step' value
+2. visualize_predictions() plots the prediction value against video time
 3. adjust_video_speed() creates a new video with dynamic speed based on the model predictions
-4. (Optional): create a baseline processed video with a constant speed adjustment
 
 Outputs:
 - A plot of the model predictions vs video time
 - A processed (shortened) version of the original video
+- (Optional) Create a baseline processed video with a constant speed adjustment can compare with the result above
 """
 
 import cv2
