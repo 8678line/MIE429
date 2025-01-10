@@ -9,4 +9,4 @@ The project methodology is as follows:
 
 Description of provided code:
 1. Crozier Data Preprocessing: Converting raw videos into a labelled and cleaned image dataset.
-2. Classifier: Building a convolutional neural network to detect sewer deficiencies, and then reducing the length of a given video based on the model predictions.
+2. Classifier: Building a convolutional neural network to detect sewer deficiencies, and then using the model predictions to process and reduce the length of a given video.
